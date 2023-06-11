@@ -1,0 +1,279 @@
+#stopwatch {
+  display: none;
+}
+
+#timer {
+  display: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#stopwatch-display,
+#timer-display {
+  font-size: 48px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 34px;
+  margin-top: 30px;
+  font-size: 6rem;
+}
+.digit {
+  color: darkgray;
+}
+.txt {
+  font-size: 30px;
+  color: #fffb07;
+  margin-top: 42px;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+}
+
+input[type="number"] {
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+.stopwatch-button {
+  margin-left: 68vh;
+  justify-content: center;
+  align-items: center;
+}
+.stopwatch-button li {
+  list-style-type: none;
+  margin: 0 -3px;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.timer-button {
+  margin-left: 58vh;
+  justify-content: center;
+  align-items: center;
+}
+.timer-button li {
+  list-style-type: none;
+  margin: 0 -3px;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.split-details {
+  margin-top: 15px;
+  margin-left: 0vh;
+  margin-right: 6vh;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.stopwatch-button-menu {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #f10894 0,
+    #94572e 100%
+  );
+  border-radius: 7px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(178, 158, 220, 0.3) 0 7px 13px -3px,
+    rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 45px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  margin: 3px;
+  width: 100px;
+  height: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+  font-weight: 550;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.stopwatch-button-menu:focus {
+  box-shadow: #01fff7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #5e6eec 0 -3px 0 inset;
+}
+
+.stopwatch-button-menu:hover {
+  box-shadow: rgba(131, 116, 164, 0.993) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #57e5dc 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.stopwatch-button-menu:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.timer-button-menu {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #e90b60 0,
+    #47174e 100%
+  );
+  border-radius: 7px;
+  box-shadow: rgba(253, 253, 253, 0.966) 0 2px 4px,
+    rgba(59, 48, 82, 0.3) 0 7px 13px -3px,
+    rgba(98, 99, 103, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 45px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  margin: 3px;
+  width: 100px;
+  height: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+  font-weight: 550;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.timer-button-menu:focus {
+  box-shadow: #05fad5 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(209, 204, 219, 0.692) 0 7px 13px -3px, #2d3cb4 0 -3px 0 inset;
+}
+
+.timer-button-menu:hover {
+  box-shadow: rgba(101, 98, 107, 0.568) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #0aec99 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.timer-button-menu:active {
+  box-shadow: #61837e 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.input {
+  font-size: 1rem;
+
+  background: linear-gradient(21deg, #198cca, #08f3c0);
+
+  padding: 3px;
+
+  display: flex;
+
+  border-radius: 40px;
+
+  *:not(span) {
+    position: relative;
+    display: inherit;
+    border-radius: inherit;
+    margin: 0;
+    border: 10px;
+    outline: 10px;
+    padding: 0 0.325em;
+    z-index: 1;
+
+    &:focus + span {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .span {
+    transform: scale(0.993, 0.94);
+    transition: transform 0.5s, opacity 0.25s;
+    opacity: 0;
+
+    position: absolute;
+    z-index: 0;
+    margin: 4px;
+   
+    border-radius: inherit;
+    pointer-events: none;
+
+    box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px 3px 30px #15d2a9,
+      -3px 3px 30px #10abff;
+  }
+
+}
+
+
+
+input {
+  font-weight: 550;
+  font-family: inherit;
+  line-height: inherit;
+  color: #000000;
+  min-width: 4rem;
+}
+
+::placeholder {
+  color: #232425ba;
+}
+
+html::after {
+  content: "";
+  background: linear-gradient(21deg, #1ba2ea, #1beabd);
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

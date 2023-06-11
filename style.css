@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url("https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900");
+
+html {
+  --s: 50px;
+  --c: #191b22;
+  --_s: calc(2 * var(--s)) calc(2 * var(--s));
+  --_g: 35.36% 35.36% at;
+  --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
+  background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) /
+      var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s),
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s),
+    repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s),
+    radial-gradient(var(--_c)) 0 calc(var(--s) / 2) / var(--s) var(--s) var(--c);
+  background-attachment: fixed;
+}
+
+h1 {
+    font-size: 4.5rem;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-family: "Rocher";
+    justify-content: center;
+    display: flex;
+    margin-right: 37px;
+  }
+  
+  @font-palette-values --Rainbow {
+    font-family: Rocher;
+    base-palette: 8;
+  }
+
+  .Rainbow {
+    font-palette: --Rainbow;
+  }
+
+  @font-face {
+    font-family: "Rocher";
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+  }
+
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  background-color: radial-gradient(#003, #000);
+  margin-top: 80px;
+  margin-right: 50px;
+}
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: none;
+  height: 50px;
+  background-color: radial-gradient(#003, #000);
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  list-style-type: none;
+  margin: 0 17px;
+  padding: 0 0 10px;
+  display: inline-block;
+}
+nav ul li a:hover {
+  color: rgb(209, 163, 251);
+  font-size: 1.2rem;
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .button-menu {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .button-menu {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .button-menu {
+    padding-left: 55px;
+    padding-right: 55px;
+    font-size: 18px;
+  }
+}
+.button-menu {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #00f84a 0,
+    #205c7d 100%
+  );
+  border-radius: 7px;
+  box-shadow: rgba(139, 138, 141, 0.806) 0 2px 4px,
+    rgba(56, 45, 84, 0.929) 0 7px 13px -3px,
+    rgba(0, 243, 243, 0.975) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 45px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  margin: -15px;
+  width: 100px;
+  height: 40px;
+  padding-left: 55px;
+  padding-right: 55px;
+
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+  font-weight: 550;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.button-menu:focus {
+  box-shadow: #09e2db 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #5e6eec 0 -3px 0 inset;
+}
+
+.button-menu:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #0efa0290 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-menu:active {
+  box-shadow: #0d26ea 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: 50px;
+  margin-right: 24px;
+  font-family: "Century Schoolbook", Georgia, Times, serif;
+  color: #ffffff;
+  padding: 7px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 550;
+  justify-content: center;
+}
+footer::before {
+  content: "\00A9"; 
+  font-size: 24px; 
+  margin-right: 5px; 
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StopWatch</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="stopwatch_timer_style.css" />
+  <link rel="stylesheet" href="stopwatch_icon_style.css" />
+</head>
+<body>
+  <main>
+    <section class="layout">
+      <h1 class="Rainbow">Clock..</h1>
+
+      <div class="icon-holder">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+            <g id="button-top">
+              <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 8v29" />
+              <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M112 8h32" />
+            </g>
+            <circle cx="128" cy="143" r="105" fill="#FFF" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+            <path id="big-hand" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 72v71" />
+          </svg>
+        </div>
+      </div>
+      <br />
+      <div>
+        <nav>
+          <ul>
+            <li><button class="button-menu" role="button" onclick="switchToStopwatch()">Stop Watch</button></li>
+            <li><button class="button-menu" role="button" onclick="switchToTimer()">Timer</button></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="stopwatch" class="container">
+        <div id="stopwatch-display">
+          <span class="digit" id="stopwatch-hr">00</span>
+          <span class="txt">Hr</span>
+          <span class="digit" id="stopwatch-min">00</span>
+          <span class="txt">Min</span>
+          <span class="digit" id="stopwatch-sec">00</span>
+          <span class="txt">Sec</span>
+          <span class="digit" id="stopwatch-count">00</span>
+        </div>
+        <ul class="stopwatch-button">
+          <li><button class="stopwatch-button-menu" id="startPauseButton" onclick="startPause()">Start/Pause</button></li>
+          <li><button class="stopwatch-button-menu" id="splitButton" onclick="split()">Split</button></li>
+          <li><button class="stopwatch-button-menu" id="resetButton" onclick="reset()">Reset</button></li>
+        </ul>
+        <div class="split-details"><ul id="splitsList"></ul></div>
+      </div>
+
+      <div id="timer" class="container">
+        <div id="timer-display">
+          <span class="digit" id="timer-hr">00</span>
+          <span class="txt">Hr</span>
+          <span class="digit" id="timer-min">00</span>
+          <span class="txt">Min</span>
+          <span class="digit" id="timer-sec">00</span>
+          <span class="txt">Sec</span>
+          <span class="digit" id="timer-count">00</span>
+        </div>
+        <ul class="timer-button">
+          <li class="input"><input type="number" id="timerInput" placeholder="Duration (seconds)" /></li>
+          <li><button class="timer-button-menu" id="timerStartButton" onclick="startTimer()">Start</button></li>
+          <li><button class="timer-button-menu" id="timerResetButton" onclick="resetTimer()">Reset</button></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>2023 Shantanu Shaw. All rights reserved</footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.icon-holder {
+  width: 6rem;
+  position: absolute;
+  margin-top: 15px;
+
+  transform: translate(-50%, -50%);
+  margin-left: 100vh;
+  
+}
+.icon-holder svg path {
+  stroke: #25ef06;
+  fill: #ffffff;
+}
+.icon-holder svg circle {
+  stroke: #070bea;
+  fill: #ce8c08;
+}
+.icon-holder div {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.icon-holder svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  color: rgb(128, 241, 16);
+  filter: drop-shadow(0 0 10px rgba(169, 238, 243, 0.719));
+}
+
+.icon-holder #button-top {
+  animation: button-top 4s ease 0s infinite;
+}
+
+.icon-holder #big-hand {
+  transform-origin: 50% 55.85%;
+  animation: big-hand 4s cubic-bezier(0.93, 0.3, 0.3, 0.93) 0.25s infinite;
+}
+
+@keyframes button-top {
+  0% {
+    transform: translate(0, 0);
+  }
+  2% {
+    transform: translate(0, -8px);
+  }
+  5% {
+    transform: translate(0px, 15px);
+  }
+  8% {
+    transform: translate(0, -5px);
+  }
+  10% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes big-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
